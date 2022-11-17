@@ -1,5 +1,5 @@
 using DrWatson
-@quickactivate "MiaoSubotnikIESH"
+@quickactivate "AnalyzingIESH"
 using JamesPlots
 using CairoMakie
 using DataFrames
