@@ -4,7 +4,7 @@ This code base is using the Julia Language and [DrWatson](https://juliadynamics.
 to make a reproducible scientific project named
 > AnalyzingIESH
 
-It is authored by jamesgardner1421.
+It is authored by James Gardner.
 
 To (locally) reproduce this project, do the following:
 
@@ -12,10 +12,12 @@ To (locally) reproduce this project, do the following:
    git-history and may need to be downloaded independently.
 1. Open a Julia console and do:
    ```
-   julia> using Pkg
-   julia> Pkg.add("DrWatson") # install globally, for using `quickactivate`
-   julia> Pkg.activate("path/to/this/project")
-   julia> Pkg.instantiate()
+   julia> ]
+   pkg> registry add https://github.com/NQCD/NQCRegistry
+   pkg> registry add https://github.com/jamesgardner1421/JamesRegistry
+   pkg> add DrWatson
+   pkg> activate path/to/this/project
+   pkg> instantiate
    ```
 
 This will install all necessary packages for you to be able to run the scripts and
