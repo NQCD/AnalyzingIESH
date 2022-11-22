@@ -2,7 +2,7 @@
 
 julia_version = "1.8.2"
 manifest_format = "2.0"
-project_hash = "deb11585514bbd5c33b063aa1cdb138f3299c08d"
+project_hash = "ad9ec702ef2d77e470681eb35364ad32e455202b"
 
 [[deps.AbstractFFTs]]
 deps = ["ChainRulesCore", "LinearAlgebra"]
@@ -550,6 +550,12 @@ deps = ["Printf"]
 git-tree-sha1 = "8339d61043228fdd3eb658d86c926cb282ae72a8"
 uuid = "59287772-0a20-5a39-b81b-1366585eb4c0"
 version = "0.4.2"
+
+[[deps.FortranNOAu111]]
+deps = ["LinearAlgebra", "NQCModels", "StaticArrays", "Unitful", "UnitfulAtomic"]
+git-tree-sha1 = "c7e3545e6c3201acf4b3b83aafa3a9122a6258a8"
+uuid = "1c79c530-3a9d-43cd-822f-bba4c4e182d2"
+version = "1.0.0"
 
 [[deps.ForwardDiff]]
 deps = ["CommonSubexpressions", "DiffResults", "DiffRules", "LinearAlgebra", "LogExpFunctions", "NaNMath", "Preferences", "Printf", "Random", "SpecialFunctions", "StaticArrays"]
@@ -1305,6 +1311,12 @@ deps = ["Dates", "SnoopPrecompile"]
 git-tree-sha1 = "b64719e8b4504983c7fca6cc9db3ebc8acc2a4d6"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
 version = "2.5.1"
+
+[[deps.Peaks]]
+deps = ["Compat"]
+git-tree-sha1 = "5f1390b0a0ef6d6411f9a9a37c4444d6a7e44780"
+uuid = "18e31ff7-3703-566c-8e60-38913d67486b"
+version = "0.4.1"
 
 [[deps.PeriodicTable]]
 deps = ["Base64", "Test", "Unitful"]
