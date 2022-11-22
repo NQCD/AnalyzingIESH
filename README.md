@@ -1,5 +1,7 @@
 # AnalyzingIESH
 
+[![DOI](https://zenodo.org/badge/567320255.svg)](https://zenodo.org/badge/latestdoi/567320255)
+
 This code base is using the Julia Language and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/)
 to make a reproducible scientific project named
 > AnalyzingIESH
