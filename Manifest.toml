@@ -1190,9 +1190,9 @@ version = "0.1.8"
 
 [[deps.NQCDynamics]]
 deps = ["AdvancedHMC", "AdvancedMH", "ComponentArrays", "DEDataArrays", "Dictionaries", "DiffEqBase", "Distributions", "FastBroadcast", "FastLapackInterface", "HDF5", "Interpolations", "LinearAlgebra", "MuladdMacro", "NQCBase", "NQCDistributions", "NQCModels", "Optim", "OrdinaryDiffEq", "Parameters", "PeriodicTable", "ProgressMeter", "QuadGK", "Random", "RecipesBase", "RecursiveArrayTools", "Reexport", "RingPolymerArrays", "Roots", "Rotations", "SciMLBase", "StaticArrays", "StatsBase", "StochasticDiffEq", "StructArrays", "TimerOutputs", "UnPack", "UnicodePlots", "Unitful", "UnitfulAtomic"]
-git-tree-sha1 = "2295a67841efe49e98dfa933814760443060c448"
+git-tree-sha1 = "164bad0a2e485a7fdb414aaa2d708f167ad2b0f6"
 uuid = "36248dfb-79eb-4f4d-ab9c-e29ea5f33e14"
-version = "0.12.1"
+version = "0.13.0"
 
 [[deps.NQCModels]]
 deps = ["FastGaussQuadrature", "ForwardDiff", "LinearAlgebra", "NQCBase", "Parameters", "Random", "RecipesBase", "Reexport", "Requires", "StaticArrays", "Unitful", "UnitfulAtomic"]
