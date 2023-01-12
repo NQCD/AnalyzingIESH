@@ -6,6 +6,8 @@ This code base is using the Julia Language and [DrWatson](https://juliadynamics.
 to make a reproducible scientific project named
 > AnalyzingIESH
 
+The scripts, data and figures support the research presented in "Efficient implementation and performance analysis of the independent electron surface hopping method for dynamics at metal surfaces".
+
 It is authored by James Gardner.
 
 To (locally) reproduce this project, do the following:

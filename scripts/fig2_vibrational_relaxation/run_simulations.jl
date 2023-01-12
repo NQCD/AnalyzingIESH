@@ -69,7 +69,7 @@ function output(sol, i)
         vibrational_energy[i] = calculate_vibrational_energy(sim, u)
     end
 
-    return (vibrational_energy, false)
+    return vibrational_energy
 end
 
 function run_simulation(params)
@@ -95,7 +95,7 @@ function run_simulation(params)
     sim = Simulation{eval(method)}(atoms, model)
     distribution = DynamicalDistribution(v, r, (3, length(atoms)))
 
-    return run_ensemble(sim, (0.0, steps*dt), distribution;
+    return run_dynamics(sim, (0.0, steps*dt), distribution;
         trajectories, dt, output,
         reduction=MeanReduction()
     )
@@ -112,6 +112,6 @@ all_params = Dict{String,Any}(
 params = dict_list(all_params)[1]
 
 @time result = run_simulation(params)
-params["vibrational"] = result
+params["vibrational"] = result[:output]
 
 @tagsave(datadir("fig2_vibrational_relaxation"), savename(params, "jld2"))

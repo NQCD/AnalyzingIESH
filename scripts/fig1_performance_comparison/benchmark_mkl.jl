@@ -14,7 +14,8 @@ all_params = Dict{String,Any}(
     "gamma"=>[1e-4, 4e-4, 1.6e-3, 6.4e-3],
     "blas"=>[:MKL],
     "bath_type"=>[:TrapezoidalRule],
-    "threads"=>[1, 4, 8]
+    "threads"=>[1, 4, 8],
+    "estimate_probability"=>[true, false]
 )
 params = dict_list(all_params)[1] # Change index to change parameters
 
@@ -31,7 +32,7 @@ println()
 println()
 
 function run_simulation(params)
-    @unpack dt, trajectories, bath_type, gamma, alg = params
+    @unpack dt, trajectories, bath_type, gamma, alg, estimate_probability = params
 
     kT = 9.5e-4
 
@@ -57,7 +58,7 @@ function run_simulation(params)
     bath = eval(bath_type)(M, -W, W)
     metal_model = AndersonHolstein(model, bath)
     atoms = Atoms(2000)
-    sim = Simulation{AdiabaticIESH}(atoms, metal_model)
+    sim = Simulation{AdiabaticIESH}(atoms, metal_model; estimate_probability)
 
     velocity = VelocityBoltzmann(5kT, atoms.masses, (1,1))
     mω² = atoms.masses[1] * model.ω^2
