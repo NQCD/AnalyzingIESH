@@ -54,7 +54,7 @@ function select_reference_data(mu)
 end
 
 function plot_data()
-    fig = Figure(resolution=(JamesPlots.RESOLUTION[1],1.2*JamesPlots.RESOLUTION[2]), figure_padding=(1, 5, 1, 1), font=projectdir("fonts", "MinionPro-Capt.otf"))
+    fig = Figure(resolution=(JamesPlots.RESOLUTION[1],1.2*JamesPlots.RESOLUTION[2]), figure_padding=(1, 5, 1, 1), fonts=(;regular=projectdir("fonts", "MinionPro-Capt.otf")))
     ax1 = MyAxis(fig[1,1], xlabel="Γ /eV", ylabel="Desorption probability", limits=(0.0, 1.0, 0, nothing))
 
     mus = [0.0, 0.5, 1.0, 1.5, 2.0]

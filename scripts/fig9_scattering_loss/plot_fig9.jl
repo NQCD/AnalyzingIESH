@@ -38,7 +38,7 @@ function plot_lines!(ax, label, lambda)
 end
 
 function plot_data()
-    fig = Figure(resolution=(JamesPlots.RESOLUTION[1],1.8*JamesPlots.RESOLUTION[2]), figure_padding=(1, 2, 1, 1), font=projectdir("fonts", "MinionPro-Capt.otf"))
+    fig = Figure(resolution=(JamesPlots.RESOLUTION[1],1.8*JamesPlots.RESOLUTION[2]), figure_padding=(1, 2, 1, 1), fonts=(;regular=projectdir("fonts", "MinionPro-Capt.otf")))
     axes = [MyAxis(fig[i,j], xlabel="Initial kinetic energy /eV", ylabel="Kinetic energy loss /%", limits=(0.25, 5.0, nothing, nothing), yticks=0:20:60) for i=1:2, j=1:1]
 
     linkyaxes!(axes...)
@@ -48,7 +48,8 @@ function plot_data()
     plot_lines!(axes[1], "IESH", 1e-1)
     plot_lines!(axes[2], "MDEF", 1e-2)
 
-    ticks = (1:5, string.(all_params["gamma"]))
+    gammas = [0.02, 0.1, 0.25, 0.5, 1.0]
+    ticks = (1:5, string.(gammas))
     Colorbar(fig[0,1]; limits=(0.5, 5.5), colormap=cgrad(colors, categorical=true), ticks=ticks, nsteps=5, ticklabelpad=-14, ticksvisible=false, label="Γ /eV", flip_vertical_label=true, vertical=false, labelpadding=6, minorticksvisible=true, minortickalign=1.0, minorticks=[1.5, 2.5, 3.5, 4.5], minorticksize=16)
 
     hidexdecorations!.(axes[1,:]; ticks=false, minorticks=false)

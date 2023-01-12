@@ -86,7 +86,7 @@ function plot_iesh_surfaces!(ax, gamma, r)
 end
 
 function plot_model_diabats()
-    fig = Figure(figure_padding=(1, 2, 1, 4), font=projectdir("fonts", "MinionPro-Capt.otf"), resolution=(JamesPlots.RESOLUTION[1], JamesPlots.RESOLUTION[2]*1.5))
+    fig = Figure(figure_padding=(1, 2, 1, 4), fonts=(;regular=projectdir("fonts", "MinionPro-Capt.otf")), resolution=(JamesPlots.RESOLUTION[1], JamesPlots.RESOLUTION[2]*1.5))
 
     ax1 = MyAxis(fig[1,1]; ylabel="Energy /eV", limits=(1, 5, -2, 6), xlabel="x /Å")
     ax2 = MyAxis(fig[2,1]; ylabel="Energy /eV", limits=(1, 5, -402, -394), xlabel="x /Å", yticks=-402:2:-396)

@@ -17,7 +17,7 @@ reference = CSV.read(datadir("physrevB2018", "fig6_gamma=1.0.csv"), DataFrame; h
 function plot_data()
     width = [4, 8, 16, 32, 64, 128, 256]
 
-    fig = Figure(figure_padding=(1, 1, 1, 2), font=projectdir("fonts", "MinionPro-Capt.otf"))
+    fig = Figure(figure_padding=(1, 1, 1, 2), fonts=(;regular=projectdir("fonts", "MinionPro-Capt.otf")))
     ax1 = MyAxis(fig[1,1], xscale=log2, xlabel="Band width /eV", ylabel="Desorption probability",
         limits=(nothing, nothing, nothing, nothing), xticks=width
     )

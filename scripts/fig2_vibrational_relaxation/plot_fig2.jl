@@ -9,6 +9,7 @@ using StatsBase
 using LinearAlgebra: normalize
 using Peaks
 using ColorSchemes, Colors
+using DelimitedFiles
 
 include(srcdir("data.jl"))
 
@@ -32,7 +33,7 @@ function plot_data!(ax, name, color, marker)
 end
 
 function plot_data()
-    fig = Figure(figure_padding=(1, 6, 1, 2), font=projectdir("fonts", "MinionPro-Capt.otf"), resolution=(JamesPlots.RESOLUTION[1],1.2*JamesPlots.RESOLUTION[2]))
+    fig = Figure(figure_padding=(1, 6, 1, 2), fonts=(;regular=projectdir("fonts", "MinionPro-Capt.otf")), resolution=(JamesPlots.RESOLUTION[1],1.2*JamesPlots.RESOLUTION[2]))
 
     limits = (0, 500, nothing, nothing)
     xlabel = "Time /fs"

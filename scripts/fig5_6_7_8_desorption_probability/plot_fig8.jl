@@ -60,7 +60,7 @@ function select_reference_data(gamma)
 end
 
 function plot_data()
-    fig = Figure(resolution=(JamesPlots.RESOLUTION[1],1.2*JamesPlots.RESOLUTION[2]), figure_padding=(1, 2, 1, 1), font=projectdir("fonts", "MinionPro-Capt.otf"))
+    fig = Figure(resolution=(JamesPlots.RESOLUTION[1],1.2*JamesPlots.RESOLUTION[2]), figure_padding=(1, 2, 1, 1), fonts=(;regular=projectdir("fonts", "MinionPro-Capt.otf")))
     ax1 = MyAxis(fig[1,1], xlabel="Chemical potential /eV", ylabel="Desorption probability", limits=(0.0, 3.0, 0, nothing))
 
     gammas = [0.02, 0.1, 0.25, 0.5, 1.0]
